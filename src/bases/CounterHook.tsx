@@ -7,12 +7,12 @@ export const CounterHook = () => {
   });
 
   return (
-    <>  
-      <h1 >Counter Hook: </h1>
-      <h2 ref={elementToAnimate}>{counter}</h2>
+    <div ref={elementToAnimate}>
+      <h1>Counter Hook: </h1>
+      <h2>{counter}</h2>
       <button className="" onClick={handleClick}>
         + 1
       </button>
-    </>
+    </div>
   );
 };

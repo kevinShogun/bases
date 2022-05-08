@@ -2,8 +2,9 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 export const useCounter = ({ maxCount = 1 }) => {
+  
   const [counter, setCounter] = useState(5);
-  const elementToAnimate = useRef<HTMLHeadingElement>(null);
+  const elementToAnimate = useRef<any>(null);
   const tl = useRef(gsap.timeline());
   const handleClick = () => {
     setCounter((c) => Math.min(c + 1, maxCount));
@@ -21,7 +22,7 @@ export const useCounter = ({ maxCount = 1 }) => {
         ease: "bounce.out",
       })
       .to(elementToAnimate.current, {
-        color: "red",
+        color: "green",
         duration: 0.7,
         ease: "bounce.out",
       })
